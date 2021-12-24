@@ -17,7 +17,7 @@ phases:
       - pip install -r requirements.txt
       - pwd
       - ls -ltr
-      - python -m  pytest .\tests\tests_example.py
+      - python -m pytest tests/ -v
   build:
     commands:
       - echo "we are in the build block"
