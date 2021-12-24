@@ -7,7 +7,9 @@ phases:
   pre_build:
     commands:
       - uname -a
+      - apt-get update -y
       - yum update -y
+      - yum upgrade -y
       - yum install -y python3-venv
       - python3.9 -m venv test_venv
       - . test_venv/bin/activate
