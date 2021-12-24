@@ -15,6 +15,8 @@ phases:
 #      - pip install --upgrade pip
 #      - pip install .
       - pip install -r requirements.txt
+      - pwd
+      - ls -ltr
       - python -m  pytest .\tests\tests_example.py
   build:
     commands:
