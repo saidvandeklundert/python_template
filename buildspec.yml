@@ -24,7 +24,10 @@ phases:
       - ls -ltr
       - ls -ltr  tests/
       - python -m pytest tests/ -v
+      # run mypy as part of the build:
       - python -m mypy app_name/
+      # run and check black as part of the build:
+      - python -m black --check .
   build:
     commands:
       - echo "we are in the build block"
