@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+  pre_build:
+    commands:
+      - apt-get install -y python3-venv
+      - python3.9 -m venv test_venv
+      - . test_venv/bin/activate
+      - pip install --upgrade pip
+      - pip install .
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "we are in the build block"
+      - echo "we will run some tests"
+  post_build:
+    commands:
+      - echo "we are in the post build phase"
