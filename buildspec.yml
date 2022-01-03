@@ -23,9 +23,10 @@ phases:
       - pwd
       - ls -ltr
       - ls -ltr  tests/
+      - pip install -e src/
       - python -m pytest tests/ -v
       # run mypy as part of the build:
-      - python -m mypy app_name/
+      - python -m mypy src/
       # run and check black as part of the build, throws up if formatting is off:
       - python -m black --check .
   build:
