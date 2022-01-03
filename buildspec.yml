@@ -7,18 +7,6 @@ phases:
   pre_build:
     commands:
       - uname -a
-#      - yum update -y
-#      - yum upgrade -y
-#      - yum install -y python3-venv
-#      - python3.9 -m venv test_venv
-#      - . test_venv/bin/activate
-#      - pip install --upgrade pip
-#      - pip install .
-#cd /opt/prelude && python -m black --check .
-#echo "### - Running isort checks ###"
-#cd /opt/prelude && python -m isort . -c
-#echo "### - Running mypy checks ###"
-#cd /opt/prelude && python -m mypy .
       - pip install -r requirements.txt
       - pwd
       - ls -ltr
